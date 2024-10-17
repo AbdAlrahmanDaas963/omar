@@ -1,4 +1,6 @@
 import { Stack, Box, Typography, Button } from "@mui/material";
+import MyButton from "../components/common/MyButton";
+import theme from "../theme";
 
 function WelcomeSection() {
   return (
@@ -19,28 +21,42 @@ function WelcomeSection() {
         },
         alignItems: "center",
         height: "fit-content",
-        minHeight: "500px",
+        minHeight: "100vh",
         maxWidth: "1500px",
         margin: "auto",
         position: "relative",
         border: "2px dotted blue",
       }}
     >
-      <Box sx={{ border: "1px solid white", width: "300px", height: "300px" }}>
+      <Box sx={{ backgroundColor: "#DADEDE", width: "240px", height: "300px" }}>
         left pic
       </Box>
       <Stack
         direction={"column"}
-        sx={{ border: "1px solid white", width: "300px", height: "300px" }}
+        sx={{ border: "0px solid white", height: "300px" }}
+        alignItems={"center"}
+        justifyContent={"center"}
+        gap={"10px"}
       >
-        <Typography>Explore Architectural Excellence!</Typography>
-        <Typography>
-          Discover inspired Architectural Solutions Tailored to your unique
-          Style and Needs.
+        <Typography sx={{ fontSize: "60px", textAlign: "center" }}>
+          Explore Architectural
+          <br /> Excellence with me!
         </Typography>
-        <Button>Get Started</Button>
+        <Typography
+          sx={{ color: theme.palette.s_white.main, textAlign: "center" }}
+        >
+          Discover inspired Architectural Solutions Tailored
+          <br /> to your unique Style and Needs.
+        </Typography>
+        <MyButton title={"Get Started"} />
       </Stack>
-      <Box sx={{ border: "1px solid white", width: "300px", height: "300px" }}>
+      <Box
+        sx={{
+          width: "240px",
+          height: "300px",
+          backgroundColor: "#DADEDE",
+        }}
+      >
         right pic
       </Box>
     </Stack>

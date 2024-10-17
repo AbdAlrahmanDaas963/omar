@@ -11,6 +11,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 
 import { useAnimation, motion } from "framer-motion";
+import theme from "../theme";
 
 const pages = ["Home", "Our Services", "About me", "Portfolio"];
 
@@ -98,7 +99,15 @@ function ResponsiveAppBar() {
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography sx={{ textAlign: "center" }}>{page}</Typography>
+                    <Typography
+                      sx={{
+                        textAlign: "center",
+                        fontWeight: "lighter",
+                        color: theme.palette.s_white.main,
+                      }}
+                    >
+                      {page}
+                    </Typography>
                   </MenuItem>
                 ))}
               </Menu>
